@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found - TikTok Date Finder. Return to our homepage to find TikTok video upload dates.">
+  <meta name="author" content="TikTokDateExtractor">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#1DBF73">
+  <meta property="og:title" content="404 Not Found - TikTok Date Finder">
+  <meta property="og:description" content="The page you're looking for doesn't exist. Return to our homepage to find TikTok video upload dates.">
+  <meta property="og:url" content="https://tiktdate.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tiktdate.com/tiktdate.webp">
+  <link rel="canonical" href="https://tiktdate.com/" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>404 Not Found - TikTok Date Finder</title>
+  <style>
+    :root {
+      --primary-color: #1DBF73;
+      --secondary-color: #0D8ABC;
+      --accent-color: #ff4757;
+      --text-color: #333;
+      --light-text: #666;
+      --border-color: #e0e0e0;
+      --card-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      --error-color: #ff4757;
+      --success-color: #1DBF73;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      line-height: 1.5;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header {
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #000;
+    }
+
+    .error-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-color);
+      padding: 40px 24px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: 72px;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 16px;
+    }
+
+    .error-message {
+      font-size: 20px;
+      margin-bottom: 24px;
+      color: var(--text-color);
+    }
+
+    .home-link {
+      display: inline-block;
+      padding: 14px 24px;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .home-link:hover {
+      background-color: #e84118;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+      color: var(--light-text);
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Mobile-specific optimizations */
+    @media (max-width: 480px) {
+      .container {
+        padding: 15px;
+      }
+      
+      header {
+        padding: 15px 0;
+      }
+      
+      .logo {
+        font-size: 40px;
+      }
+      
+      h1 {
+        font-size: 22px;
+      }
+      
+      .error-card {
+        padding: 30px 20px;
+      }
+      
+      .error-code {
+        font-size: 60px;
+      }
+      
+      .error-message {
+        font-size: 18px;
+      }
+      
+      .home-link {
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">📅</div>
+      <h1>TikTok Date Finder</h1>
+    </header>
+
+    <main>
+      <div class="error-card">
+        <div class="error-code">404</div>
+        <div class="error-message">Page Not Found</div>
+        <p style="margin-bottom: 24px; color: var(--light-text);">The page you're looking for doesn't exist or has been moved.</p>
+        <a href="/" class="home-link">Go to Homepage</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>TikTok Date Finder &copy; <span id="year"></span></p>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

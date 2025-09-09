@@ -1,0 +1,21 @@
+{
+  "name": "TikTok Date Finder",
+  "short_name": "TikTok Date",
+  "description": "Find the exact upload date of any TikTok video instantly",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1DBF73",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["utilities", "productivity"],
+  "lang": "en",
+  "scope": "/",
+  "id": "tiktok-date-finder"
+}

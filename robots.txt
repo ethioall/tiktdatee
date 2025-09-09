@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+Sitemap: https://tiktdate.com/sitemap.xml

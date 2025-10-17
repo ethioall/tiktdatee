@@ -417,10 +417,415 @@
   line-height: 1.5;
   color: var(--light-text);
 }
+
+/* Vista Social Banner Styles */
+.vista-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.vista-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+}
+
+.vista-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.vista-banner-text {
+  flex: 1;
+  color: white;
+}
+
+.vista-banner-title {
+  font-size: clamp(18px, 4vw, 22px);
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vista-banner-subtitle {
+  font-size: clamp(14px, 3vw, 16px);
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.vista-banner-button {
+  background: rgba(255, 255, 255, 0.95);
+  color: #667eea;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+}
+
+.vista-banner-button:hover {
+  background: white;
+  color: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.vista-banner-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.vista-banner-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.vista-banner-dot:nth-child(1) {
+  top: 20px;
+  right: 20px;
+  animation-delay: 0s;
+}
+
+.vista-banner-dot:nth-child(2) {
+  top: 40px;
+  right: 40px;
+  animation-delay: 1s;
+}
+
+.vista-banner-dot:nth-child(3) {
+  top: 60px;
+  right: 20px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.3;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .vista-banner {
+    background: linear-gradient(135deg, #4c51bf 0%, #553c9a 100%);
+    box-shadow: 0 8px 32px rgba(76, 81, 191, 0.4);
+  }
+  
+  .vista-banner:hover {
+    box-shadow: 0 12px 40px rgba(76, 81, 191, 0.5);
+  }
+  
+  .vista-banner-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .vista-banner-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .vista-banner {
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .vista-banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .vista-banner-button {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+  
+  .vista-banner-decoration {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vista-banner {
+    padding: 16px;
+    margin: 16px 0;
+  }
+  
+  .vista-banner-title {
+    font-size: 18px;
+  }
+  
+  .vista-banner-subtitle {
+    font-size: 14px;
+  }
+  
+  .vista-banner-button {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Top Banner Styles */
+.vista-banner-top {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+}
+
+.vista-banner-top:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.vista-banner-top .vista-banner-title {
+  font-size: clamp(16px, 3.5vw, 18px);
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+}
+
+.vista-banner-top .vista-banner-subtitle {
+  font-size: clamp(12px, 2.5vw, 14px);
+  margin: 0;
+  opacity: 0.9;
+}
+
+.vista-banner-top .vista-banner-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Compact Banner Styles */
+.vista-banner-compact {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+}
+
+.vista-banner-compact:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(102, 126, 234, 0.3);
+}
+
+.vista-banner-compact .vista-banner-title {
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.vista-banner-compact .vista-banner-button {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Result Banner Styles */
+.vista-banner-result {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vista-banner-result .vista-banner-title {
+  font-size: clamp(16px, 3.5vw, 18px);
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+}
+
+.vista-banner-result .vista-banner-subtitle {
+  font-size: clamp(12px, 2.5vw, 14px);
+  margin: 0;
+  opacity: 0.9;
+}
+
+.vista-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vista-banner-close {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vista-banner-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Left Sidebar Banner */
+.vista-banner-sidebar-left {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.vista-banner-sidebar-left:hover {
+  transform: translateY(-50%) translateX(5px);
+  box-shadow: 0 6px 24px rgba(102, 126, 234, 0.4);
+}
+
+.vista-banner-sidebar-left .vista-banner-content {
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+}
+
+.vista-banner-sidebar-left .vista-banner-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.vista-banner-sidebar-left .vista-banner-subtitle {
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.vista-banner-sidebar-left .vista-banner-button {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Hide sidebar on mobile */
+@media (max-width: 1024px) {
+  .vista-banner-sidebar-left {
+    display: none;
+  }
+}
+
+/* Mobile adjustments for all banners */
+@media (max-width: 768px) {
+  .vista-banner-top,
+  .vista-banner-compact,
+  .vista-banner-result {
+    padding: 12px 16px;
+    margin: 12px 0;
+  }
+  
+  .vista-banner-top .vista-banner-content,
+  .vista-banner-compact .vista-banner-content,
+  .vista-banner-result .vista-banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .vista-banner-top .vista-banner-button,
+  .vista-banner-compact .vista-banner-button,
+  .vista-banner-result .vista-banner-button {
+    width: 100%;
+  }
+}
   </style>
   
 </head>
 <body>
+
+  <!-- Left Sidebar Ad -->
+  <div class="vista-banner-sidebar-left">
+    <div class="vista-banner-content">
+      <div class="vista-banner-text">
+        <h5 class="vista-banner-title">🚀 Vista Social</h5>
+        <p class="vista-banner-subtitle">AI TikTok Tools</p>
+      </div>
+      <a href="https://vistasocial.com?fpr=amredin16" target="_blank" rel="noopener noreferrer" class="vista-banner-button">
+        Try
+      </a>
+    </div>
+  </div>
 
   <div class="container">
     <header>
@@ -428,6 +833,19 @@
       <h1>TikTok Date Finder</h1>
       <p class="tagline">Discover the exact upload date of any TikTok video</p>
     </header>
+
+    <!-- Top Sidebar Ad -->
+    <div class="vista-banner-top">
+      <div class="vista-banner-content">
+        <div class="vista-banner-text">
+          <h4 class="vista-banner-title">🚀 Grow your TikTok with Vista Social</h4>
+          <p class="vista-banner-subtitle">AI-Powered Automation</p>
+        </div>
+        <a href="https://vistasocial.com?fpr=amredin16" target="_blank" rel="noopener noreferrer" class="vista-banner-button">
+          Try Now
+        </a>
+      </div>
+    </div>
 
     <div class="tool-card">
       <div class="input-group">
@@ -437,6 +855,33 @@
       <div class="output" id="output"></div>
     </div>
 
+    <!-- Ad after operation results -->
+    <div class="vista-banner-result" id="vista-banner-result" style="display: none;">
+      <div class="vista-banner-content">
+        <div class="vista-banner-text">
+          <h4 class="vista-banner-title">🚀 Automate your TikTok growth</h4>
+          <p class="vista-banner-subtitle">Vista Social - AI Powered</p>
+        </div>
+        <div class="vista-banner-actions">
+          <a href="https://vistasocial.com?fpr=amredin16" target="_blank" rel="noopener noreferrer" class="vista-banner-button">
+            Try Vista Social
+          </a>
+          <button class="vista-banner-close" onclick="closeResultAd()">×</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ad before disclaimer cards -->
+    <div class="vista-banner-compact">
+      <div class="vista-banner-content">
+        <div class="vista-banner-text">
+          <h4 class="vista-banner-title">🚀 Vista Social - AI TikTok Automation</h4>
+        </div>
+        <a href="https://vistasocial.com?fpr=amredin16" target="_blank" rel="noopener noreferrer" class="vista-banner-button">
+          Get Started
+        </a>
+      </div>
+    </div>
 
     <div class="disclaimer-card">
       <div class="disclaimer-pattern"></div>
@@ -464,7 +909,23 @@
       </div>
     </div>
 
-    
+    <!-- Vista Social Ad Banner -->
+    <div class="vista-banner">
+      <div class="vista-banner-content">
+        <div class="vista-banner-text">
+          <h3 class="vista-banner-title">🚀 Automate and grow your TikTok with Vista Social</h3>
+          <p class="vista-banner-subtitle">Powered by AI</p>
+        </div>
+        <a href="https://vistasocial.com?fpr=amredin16" target="_blank" rel="noopener noreferrer" class="vista-banner-button">
+          Try Vista Social Now
+        </a>
+      </div>
+      <div class="vista-banner-decoration">
+        <div class="vista-banner-dot"></div>
+        <div class="vista-banner-dot"></div>
+        <div class="vista-banner-dot"></div>
+      </div>
+    </div>
 
     <div class="description-section">
       <h2>How to Find TikTok Video Upload Dates</h2>
@@ -760,12 +1221,33 @@
             output.style.display = "block";
             output.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             
+            // Show Vista Social ad after successful operation
+            setTimeout(() => {
+                showResultAd();
+            }, 2000);
+            
         } catch (error) {
             hideLoading();
             const output = document.getElementById("output");
             output.innerHTML = `<div>${error.message}</div>`;
             output.className = "output error";
             output.style.display = "block";
+        }
+    }
+    
+    // Vista Social ad functions
+    function showResultAd() {
+        const resultAd = document.getElementById('vista-banner-result');
+        if (resultAd) {
+            resultAd.style.display = 'block';
+            resultAd.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }
+    
+    function closeResultAd() {
+        const resultAd = document.getElementById('vista-banner-result');
+        if (resultAd) {
+            resultAd.style.display = 'none';
         }
     }
     </script>
